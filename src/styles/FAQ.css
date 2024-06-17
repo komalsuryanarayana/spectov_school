@@ -1,8 +1,8 @@
 .faq {
   width: 100%;
-  background-color: #ffffffaa; /* White background for the entire FAQ section */
-  padding: 40px 270px; /* Add padding for better spacing */
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  background-color: #ffffffaa;
+  padding: 40px 270px;
+  box-sizing: border-box;
   text-align: center;
   font-weight: bold;
 }
@@ -23,7 +23,7 @@
   cursor: pointer;
   font-weight: bold;
   padding: 10px;
-  background-color: #f9f9f9e1; /* Light grey background for questions */
+  background-color: #f9f9f9e1;
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: background-color 0s ease-in-out;
@@ -44,7 +44,7 @@
 
 .faq-answer {
   padding: 10px 20px;
-  background-color: #fff; /* White background for answers */
+  background-color: #fff;
   border-left: 3px solid #333;
   border-radius: 4px;
   margin-top: 5px;
