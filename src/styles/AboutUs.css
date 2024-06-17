@@ -1,0 +1,60 @@
+.about-us {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #fff; /* White background */
+}
+
+.about-us h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.image-scroll {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-container {
+  flex: 0 0 33.33%; /* Show three images at a time */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.scroll-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1; /* Ensure the image is square */
+  max-width: 350px; /* Limit the max size of each image */
+  max-height: 350px; /* Limit the max size of each image */
+}
+.scroll-button {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: rgba(251, 248, 248, 0.941);
+  color: rgb(25, 21, 21);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.scroll-button.left {
+  left: 10px; /* Adjust the left button position */
+}
+
+.scroll-button.right {
+  right: 10px; /* Adjust the right button position */
+}
+
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
