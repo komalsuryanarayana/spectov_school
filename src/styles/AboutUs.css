@@ -1,7 +1,7 @@
 .about-us {
   text-align: center;
   padding: 100px 20px;
-  background-color: #fff; /* White background */
+  background-color: #fff;
 }
 
 .about-us h2 {
@@ -16,7 +16,7 @@
 }
 
 .image-container {
-  flex: 0 0 33.33%; /* Show three images at a time */
+  flex: 0 0 33.33%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,9 +31,9 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  aspect-ratio: 1; /* Ensure the image is square */
-  max-width: 350px; /* Limit the max size of each image */
-  max-height: 350px; /* Limit the max size of each image */
+  aspect-ratio: 1;
+  max-width: 350px;
+  max-height: 350px;
 }
 .scroll-button {
   position: absolute;
@@ -48,11 +48,11 @@
 }
 
 .scroll-button.left {
-  left: 10px; /* Adjust the left button position */
+  left: 10px;
 }
 
 .scroll-button.right {
-  right: 10px; /* Adjust the right button position */
+  right: 10px;
 }
 
 .scroll-button:hover {
