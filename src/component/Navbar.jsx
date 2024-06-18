@@ -30,8 +30,8 @@ function CustomNavbar() {
             <label htmlFor="navbarDropdown" className="navbar-link">About</label>
             
             <ul className="dropdown-menu">
-              <li><a href="/AboutUs" className="dropdown-item">Action</a></li>
-              <li><a href="#" className="dropdown-item">Fee</a></li>
+              <li><a href="#" className="dropdown-item">Action</a></li>
+              <li><a href="" className="dropdown-item">Fee</a></li>
             </ul>
           </li>
         </ul>
