@@ -4,7 +4,7 @@ import '../styles/AboutUs.css';
 const images = [
   { src: '/images/1.jpg', heading: 'Over Vision', content: 'Our vision is to create a lovable and nurturing environment for both parents and children by setting new benchmarks through a trans disciplinary, competency driven and reformative ecosystem and make them self-adaptive & resilient future ready global citizens' },
   { src: '/images/2.jpg', heading: 'Our Mission', content: 'Our mission is to create lifelong leaders. Leaders International School is dedicated towards imbibing moral, spiritual and ethical values in each child. We not only focus upon teaching a concept but create environment where children can hone their own skills and potential.' },
-  { src: '/images/3.jpg', heading: 'Our Core Team', content: 'She is a dynamic educationist and parenting proficient whose commitment to the cause of education is well known by all. As an expert on parenting, she has given parenting its due importance and popularity. Her work has been acknowledged by HRD ministry along with ASSOCHAM' },
+  { src: '/images/5.jpg', heading: 'Our Core Team', content: 'She is a dynamic educationist and parenting proficient whose commitment to the cause of education is well known by all. As an expert on parenting, she has given parenting its due importance and popularity. Her work has been acknowledged by HRD ministry along with ASSOCHAM' },
 ];
 
 const AboutUs = () => {
