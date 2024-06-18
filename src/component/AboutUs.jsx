@@ -1,76 +1,29 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import '../styles/AboutUs.css';
 
 const images = [
-  '/images/1.jpg',
-  '/images/2.jpg',
-  '/images/3.jpg',
-  '/images/4.jpg',
-  '/images/5.jpg',
-  '/images/6.jpg',
-  '/images/7.jpg',
-  '/images/8.jpg'
+  { src: '/images/1.jpg', heading: 'Over Vision', content: 'Our vision is to create a lovable and nurturing environment for both parents and children by setting new benchmarks through a trans disciplinary, competency driven and reformative ecosystem and make them self-adaptive & resilient future ready global citizens' },
+  { src: '/images/2.jpg', heading: 'Our Mission', content: 'Our mission is to create lifelong leaders. Leaders International School is dedicated towards imbibing moral, spiritual and ethical values in each child. We not only focus upon teaching a concept but create environment where children can hone their own skills and potential.' },
+  { src: '/images/3.jpg', heading: 'Our Core Team', content: 'She is a dynamic educationist and parenting proficient whose commitment to the cause of education is well known by all. As an expert on parenting, she has given parenting its due importance and popularity. Her work has been acknowledged by HRD ministry along with ASSOCHAM' },
 ];
 
 const AboutUs = () => {
-  const scrollRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    let intervalId;
-    const scrollInterval = () => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollBy({ left: scrollRef.current.clientWidth / 3, behavior: 'smooth' });
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }
-    };
-
-    const startScrolling = () => {
-      intervalId = setInterval(() => {
-        scrollInterval();
-      }, 3000); // Change image every 3 seconds
-    };
-
-    startScrolling();
-
-    return () => clearInterval(intervalId);
-  }, [currentIndex]);
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -scrollRef.current.clientWidth / 3, behavior: 'smooth' });
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: scrollRef.current.clientWidth / 3, behavior: 'smooth' });
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }
-  };
-
-  const handleClick = (index) => {
-    setCurrentIndex(index);
-    if (scrollRef.current) {
-      const scrollAmount = (index - currentIndex) * (scrollRef.current.clientWidth / 3);
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="about-us">
-      <h2>About Us</h2>
-      <div className="image-scroll-wrapper">
-        <button className="scroll-button left" onClick={scrollLeft}>❮</button>
-        <div className="image-scroll" ref={scrollRef}>
-          {images.map((src, index) => (
-            <div className="image-container" key={index} onClick={() => handleClick(index)}>
-              <img src={src} alt={`About us ${index}`} className="scroll-image" />
+      <h1>About Prakash Play School</h1>
+      <p>Little Leaders School under the aegis of Leaders Learning House Pvt. Ltd. is an innovative social enterprise with a vision to transform India's schools. The school is promoted by alumni of IIM/ IIT and professionals having more than 50 years of experience in the field of education. Little Leaders has high-quality curriculum, training, assessment and on-going support capabilities, the single goal of all the teachers in 'Little Leaders' is to provide children with a culturally sound environment, right values, love and protection needed for a healthy body, mind and soul in the most critical phase of a child's growing years. </p>
+      <div className="image-container">
+        {images.map((image, index) => (
+          <div className="image-item" key={index}>
+            <img src={image.src} alt={image.heading} className="image" />
+            <div className="image-overlay">
+              <p>{image.content}</p>
             </div>
-          ))}
-        </div>
-        <button className="scroll-button right" onClick={scrollRight}>❯</button>
+            <div className="image-heading">
+              <h2>{image.heading}</h2>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
